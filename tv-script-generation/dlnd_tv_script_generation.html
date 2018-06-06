@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>dlnd_tv_script_generation</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>dlnd_tv_script_generation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -12599,7 +12599,7 @@ Default GPU Device: /gpu:0
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">80</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># RNN Size</span>
@@ -12607,11 +12607,11 @@ Default GPU Device: /gpu:0
 <span class="c1"># Embedding Dimension Size</span>
 <span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">512</span>
 <span class="c1"># Sequence Length</span>
-<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.005</span>
 <span class="c1"># Show stats for every n number of batches</span>
-<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">35</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12735,56 +12735,86 @@ Default GPU Device: /gpu:0
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/5   train_loss = 8.820
-Epoch  10 Batch    0/5   train_loss = 5.934
-Epoch  20 Batch    0/5   train_loss = 5.587
-Epoch  30 Batch    0/5   train_loss = 5.066
-Epoch  40 Batch    0/5   train_loss = 4.780
-Epoch  50 Batch    0/5   train_loss = 4.479
-Epoch  60 Batch    0/5   train_loss = 4.195
-Epoch  70 Batch    0/5   train_loss = 3.906
-Epoch  80 Batch    0/5   train_loss = 3.461
-Epoch  90 Batch    0/5   train_loss = 3.066
-Epoch 100 Batch    0/5   train_loss = 2.578
-Epoch 110 Batch    0/5   train_loss = 2.021
-Epoch 120 Batch    0/5   train_loss = 1.641
-Epoch 130 Batch    0/5   train_loss = 1.240
-Epoch 140 Batch    0/5   train_loss = 0.874
-Epoch 150 Batch    0/5   train_loss = 0.594
-Epoch 160 Batch    0/5   train_loss = 0.488
-Epoch 170 Batch    0/5   train_loss = 0.253
-Epoch 180 Batch    0/5   train_loss = 0.159
-Epoch 190 Batch    0/5   train_loss = 0.103
-Epoch 200 Batch    0/5   train_loss = 0.071
-Epoch 210 Batch    0/5   train_loss = 0.053
-Epoch 220 Batch    0/5   train_loss = 0.042
-Epoch 230 Batch    0/5   train_loss = 0.036
-Epoch 240 Batch    0/5   train_loss = 0.031
-Epoch 250 Batch    0/5   train_loss = 0.028
-Epoch 260 Batch    0/5   train_loss = 0.026
-Epoch 270 Batch    0/5   train_loss = 0.024
-Epoch 280 Batch    0/5   train_loss = 0.023
-Epoch 290 Batch    0/5   train_loss = 0.022
-Epoch 300 Batch    0/5   train_loss = 0.021
-Epoch 310 Batch    0/5   train_loss = 0.020
-Epoch 320 Batch    0/5   train_loss = 0.020
-Epoch 330 Batch    0/5   train_loss = 0.019
-Epoch 340 Batch    0/5   train_loss = 0.019
-Epoch 350 Batch    0/5   train_loss = 0.019
-Epoch 360 Batch    0/5   train_loss = 0.018
-Epoch 370 Batch    0/5   train_loss = 0.018
-Epoch 380 Batch    0/5   train_loss = 0.018
-Epoch 390 Batch    0/5   train_loss = 0.018
-Epoch 400 Batch    0/5   train_loss = 0.017
-Epoch 410 Batch    0/5   train_loss = 0.017
-Epoch 420 Batch    0/5   train_loss = 0.017
-Epoch 430 Batch    0/5   train_loss = 0.017
-Epoch 440 Batch    0/5   train_loss = 0.017
-Epoch 450 Batch    0/5   train_loss = 0.017
-Epoch 460 Batch    0/5   train_loss = 0.017
-Epoch 470 Batch    0/5   train_loss = 0.016
-Epoch 480 Batch    0/5   train_loss = 0.016
-Epoch 490 Batch    0/5   train_loss = 0.016
+<pre>Epoch   0 Batch    0/35   train_loss = 8.821
+Epoch   1 Batch    0/35   train_loss = 6.397
+Epoch   2 Batch    0/35   train_loss = 5.984
+Epoch   3 Batch    0/35   train_loss = 5.224
+Epoch   4 Batch    0/35   train_loss = 4.791
+Epoch   5 Batch    0/35   train_loss = 4.563
+Epoch   6 Batch    0/35   train_loss = 4.411
+Epoch   7 Batch    0/35   train_loss = 4.249
+Epoch   8 Batch    0/35   train_loss = 4.071
+Epoch   9 Batch    0/35   train_loss = 3.896
+Epoch  10 Batch    0/35   train_loss = 3.669
+Epoch  11 Batch    0/35   train_loss = 3.444
+Epoch  12 Batch    0/35   train_loss = 3.226
+Epoch  13 Batch    0/35   train_loss = 2.990
+Epoch  14 Batch    0/35   train_loss = 2.762
+Epoch  15 Batch    0/35   train_loss = 2.553
+Epoch  16 Batch    0/35   train_loss = 2.370
+Epoch  17 Batch    0/35   train_loss = 2.187
+Epoch  18 Batch    0/35   train_loss = 2.011
+Epoch  19 Batch    0/35   train_loss = 1.849
+Epoch  20 Batch    0/35   train_loss = 1.606
+Epoch  21 Batch    0/35   train_loss = 1.444
+Epoch  22 Batch    0/35   train_loss = 1.228
+Epoch  23 Batch    0/35   train_loss = 1.057
+Epoch  24 Batch    0/35   train_loss = 0.932
+Epoch  25 Batch    0/35   train_loss = 0.816
+Epoch  26 Batch    0/35   train_loss = 0.711
+Epoch  27 Batch    0/35   train_loss = 0.645
+Epoch  28 Batch    0/35   train_loss = 0.551
+Epoch  29 Batch    0/35   train_loss = 0.505
+Epoch  30 Batch    0/35   train_loss = 0.433
+Epoch  31 Batch    0/35   train_loss = 0.379
+Epoch  32 Batch    0/35   train_loss = 0.344
+Epoch  33 Batch    0/35   train_loss = 0.315
+Epoch  34 Batch    0/35   train_loss = 0.287
+Epoch  35 Batch    0/35   train_loss = 0.272
+Epoch  36 Batch    0/35   train_loss = 0.263
+Epoch  37 Batch    0/35   train_loss = 0.255
+Epoch  38 Batch    0/35   train_loss = 0.252
+Epoch  39 Batch    0/35   train_loss = 0.247
+Epoch  40 Batch    0/35   train_loss = 0.245
+Epoch  41 Batch    0/35   train_loss = 0.241
+Epoch  42 Batch    0/35   train_loss = 0.241
+Epoch  43 Batch    0/35   train_loss = 0.238
+Epoch  44 Batch    0/35   train_loss = 0.238
+Epoch  45 Batch    0/35   train_loss = 0.236
+Epoch  46 Batch    0/35   train_loss = 0.236
+Epoch  47 Batch    0/35   train_loss = 0.234
+Epoch  48 Batch    0/35   train_loss = 0.234
+Epoch  49 Batch    0/35   train_loss = 0.233
+Epoch  50 Batch    0/35   train_loss = 0.233
+Epoch  51 Batch    0/35   train_loss = 0.231
+Epoch  52 Batch    0/35   train_loss = 0.232
+Epoch  53 Batch    0/35   train_loss = 0.230
+Epoch  54 Batch    0/35   train_loss = 0.231
+Epoch  55 Batch    0/35   train_loss = 0.229
+Epoch  56 Batch    0/35   train_loss = 0.230
+Epoch  57 Batch    0/35   train_loss = 0.229
+Epoch  58 Batch    0/35   train_loss = 0.229
+Epoch  59 Batch    0/35   train_loss = 0.228
+Epoch  60 Batch    0/35   train_loss = 0.229
+Epoch  61 Batch    0/35   train_loss = 0.228
+Epoch  62 Batch    0/35   train_loss = 0.228
+Epoch  63 Batch    0/35   train_loss = 0.227
+Epoch  64 Batch    0/35   train_loss = 0.228
+Epoch  65 Batch    0/35   train_loss = 0.227
+Epoch  66 Batch    0/35   train_loss = 0.227
+Epoch  67 Batch    0/35   train_loss = 0.226
+Epoch  68 Batch    0/35   train_loss = 0.227
+Epoch  69 Batch    0/35   train_loss = 0.226
+Epoch  70 Batch    0/35   train_loss = 0.227
+Epoch  71 Batch    0/35   train_loss = 0.225
+Epoch  72 Batch    0/35   train_loss = 0.226
+Epoch  73 Batch    0/35   train_loss = 0.225
+Epoch  74 Batch    0/35   train_loss = 0.226
+Epoch  75 Batch    0/35   train_loss = 0.225
+Epoch  76 Batch    0/35   train_loss = 0.226
+Epoch  77 Batch    0/35   train_loss = 0.225
+Epoch  78 Batch    0/35   train_loss = 0.226
+Epoch  79 Batch    0/35   train_loss = 0.225
 Model Trained and Saved
 </pre>
 </div>
@@ -12925,7 +12955,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
@@ -12936,6 +12966,13 @@ Model Trained and Saved
 <span class="sd">    :return: String of the predicted word</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
+    
+<span class="c1">#     # Experiment: select 1 out of the 2 most probable words to generate different scripts</span>
+<span class="c1">#     top_2_words = np.argsort(probabilities)[-2:]  # Select top 2 words</span>
+<span class="c1">#     pick_one_word = np.random.choice(top_2_words, 1)[0]  # Randomly chose one</span>
+<span class="c1">#     return int_to_vocab[pick_one_word]</span>
+
+    <span class="c1"># Only take the word with max probability</span>
     <span class="n">max_prob_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">max_prob_idx</span><span class="p">]</span>
 
@@ -12980,7 +13017,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
@@ -13044,21 +13081,17 @@ Model Trained and Saved
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./save
-moe_szyslak: power off, einstein.
-moe_szyslak: so whaddaya want here? uh, appendectomy, lipo, or(excited, selling) the&#34; sampler&#34;? that&#39;s very popular.
-homer_simpson:(dramatically) i want you to stick this crayon into my brain.
-moe_szyslak: no problem.(art carney arm flourish) the ol&#39; crayola oblongata.
-moe_szyslak: all right, tell me when i hit the sweet spot.
-homer_simpson: deeper, you pusillanimous pilsner-pusher.
-moe_szyslak: all right, all right.
-homer_simpson:(inanely) yeah,(pointed) i never had a little coffee&#39;ll do the best we have you.
-homer_simpson: oh, they are the designated drivers?
-moe_szyslak: homer_simpson: well, moe. don&#39;t get to hell.
-moe_szyslak: yeah, that&#39;s don&#39;t i catch you, the car.
-moe_szyslak:(cutting him off) i&#39;m so sorry. i&#39;m gonna start over?
-moe_szyslak: what got.
-moe_szyslak:(sighs) fine.
-moe_szyslak: you could never get back to here to duff time to your head) i got your
+moe_szyslak:(into phone) gotcha ya down for forty bucks. good luck your eminence.
+moe_szyslak:(sobs) oh, god, i always get this...
+barney_gumble:(reading)&#34; strokkur geysir.&#34;
+homer_simpson:(loud) did you ever see that&#34; blue man group?&#34; since you could win your mom back in the pledge of third world, but then they said they want to learn
+moe_szyslak: oh my god, you gotta be kidding it!
+homer_simpson: she&#39;s doin&#39; that, and everything... or the little miss springfield pageant. you see, homer.(looks at glen) hey, are you thinking what i&#39;m thinking?
+homer_simpson: i know how to make me tell you,(choking noises)
+homer_simpson:(to self) shut up!
+lisa_simpson:(beat) all right, tap jockey, you owe fat tony... my people could be okay.
+homer_simpson: moe, what have i ever love about your friend.
+moe_szyslak:(reading) you owe me..
 </pre>
 </div>
 </div>
